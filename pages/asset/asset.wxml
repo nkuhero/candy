@@ -1,0 +1,23 @@
+<!--pages/asset/asset.wxml-->
+<view class="wx-content-wrap">
+
+
+
+    <view class="wrap">
+
+        <view class="header"  wx:for="{{account}}">
+            <image style="width: 20px; height: 20px; background-color: #eeeeee;" src="{{item.pic}}"></image><text>资产名称：{{item.name}}  余额：{{item.balance}}</text>
+        </view>
+        
+
+        <view>
+          <button class="packet" bindtap="packet">我要发糖果红包</button>
+        </view>
+         <view>
+          <button class="packet" bindtap="deposit">我要提现</button>
+        </view>
+    </view>
+
+
+</view>
+

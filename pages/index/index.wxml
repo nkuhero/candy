@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="header">
+    <text>CandyPocket</text>
+  </view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="info">
+    <text>千万资产等你来领，赶紧戳</text><image style="width: 20px; height: 20px; background-color: #eeeeee;" src="http://xme01.7cto.com/image/20180606085635.png"></image>
+  </view>
+
+
+  <view class="header"  wx:for="{{candyList}}">
+        <button class="candy" bindtap="getCandy" data-activity-id="{{item.id}}">{{item.name}}<image style="width: 20px; height: 20px; background-color: #eeeeee;" src="{{item.pic}}"></image>{{item.each}}(共{{item.total}}份)</button> 
+
+        <button class="weui-btn mini-btn" type="primary" size="mini" open-type="share" data-activity-id="{{item.id}}">分享</button>
+            
+  </view>
+
+  <view class="usermotto">
+    <button class="asset" bindtap="asset">我的资产</button>
+  </view>
+  
+</view>

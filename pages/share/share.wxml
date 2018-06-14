@@ -1,0 +1,12 @@
+<!--pages/share/share.wxml-->
+<view class="wx-content-wrap">
+
+    <view class="wrap">
+        <view class="header">
+             <button class="candy" bindtap="getCandy" data-activity-id="{{candy.id}}" data-share-user-id="{{share_user_id}}">{{candy.name}}<image style="width: 20px; height: 20px; background-color: #eeeeee;" src="{{candy.pic}}"></image>{{candy.each}}(共{{candy.total}}份)</button> 
+        </view>
+        
+    </view>
+
+</view>
+

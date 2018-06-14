@@ -1,0 +1,42 @@
+<!--pages/packet/packet.wxml-->
+
+
+
+
+<view class="weui-cells weui-cells_after-title">
+
+    <view class="weui-cell weui-cell_input">
+
+        <view>
+            <text class="type">币种</text>
+            <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{account}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.name}}
+            </label>
+            </radio-group>
+        </view>
+
+
+        <view class="weui-cell__hd">
+            <view class="weui-label">红包总量</view>
+        </view>
+        <view class="weui-cell__bd">
+           <input bindinput="bindTotalBlur" name="total" class="total" type="digit" maxlength="6" placeholder="请输入红包总量"></input><text class="type">当前可用:</text>{{balance}}
+        </view>
+
+        <view class="weui-cell__hd">
+            <view class="weui-label">红包个数</view>
+        </view>
+        <view class="weui-cell__bd">
+           <input bindinput="bindNumBlur" name="num" class="total" type="digit" maxlength="6" placeholder="请输入红包个数"></input>
+        </view>
+
+
+    </view>
+
+</view>
+
+<button class="weui-btn" type="primary" size="default" open-type="share">
+    发送
+</button>
+

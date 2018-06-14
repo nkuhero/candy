@@ -1,0 +1,25 @@
+<!--pages/prize/prize.wxml-->
+<view>
+ <text class="type">分享用户: </text>{{prize.userName}}
+</view>
+
+<view>
+ <text class="type">糖果名称: </text>{{prize.candyName}}
+</view>
+
+<view>
+ <text class="type">糖果总量: </text>{{prize.total}}
+</view>
+
+<view>
+ <text class="type">红包总数: </text>{{prize.num}}   <text class="type">已领取: </text>{{prize.get_num}}
+</view>
+
+  <view class="header"  wx:for="{{prize.userList}}">
+      {{item.userName}} ***   {{item.getDate}}   ***   {{item.total}}
+  </view>
+
+
+<view>
+<button class="candy" bindtap="getPacket" data-packet-no="{{prize.packetNo}}" data-asset-code="{{prize.candyName}}">领取红包</button>
+</view>

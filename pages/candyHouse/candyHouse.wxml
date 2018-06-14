@@ -1,0 +1,11 @@
+<!--pages/candyHouse/candyHouse.wxml-->
+<view class="wx-content-wrap">
+
+    <view class="wrap">
+        <view class="header"  wx:for="{{candyList}}">
+            <button class="candy" bindtap="getCandy" data-activity-id="{{item.id}}">{{item.name}}</button>    
+        </view>
+        
+    </view>
+
+</view>

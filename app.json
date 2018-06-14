@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/candyHouse/candyHouse",
+    "pages/asset/asset",
+    "pages/packet/packet",
+    "pages/prize/prize",
+    "pages/share/share",
+    "pages/deposit/deposit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
